@@ -18,8 +18,6 @@ refs.switch.addEventListener('change', onSwitch);
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
 
 function onSwitch() {
-
-
   if (refs.body.classList.contains(Theme.DARK)) {
     refs.body.classList.remove(Theme.DARK);
     refs.body.classList.add(Theme.LIGHT);
@@ -29,7 +27,6 @@ function onSwitch() {
   refs.body.classList.remove(Theme.LIGHT);
   refs.body.classList.add(Theme.DARK);
   localStorage.setItem('isDarkTheme', true);
-
 }
 
 function onDocumentLoad() {
@@ -37,7 +34,6 @@ function onDocumentLoad() {
     refs.body.classList.add(Theme.DARK);
     refs.switch.defaultChecked = true;
   }
-  
 }
 
 function createDishMarkup(menu) {
